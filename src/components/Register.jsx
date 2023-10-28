@@ -69,7 +69,7 @@ const Register = () => {
     <div className="registration-form">
       <p>{error}</p>
       <form onSubmit={(e) => handlerSubmit(e)} className="registration">
-        <label htmlFor="email">email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           name="email"
@@ -77,7 +77,7 @@ const Register = () => {
           value={email}
           onChange={(e) => handlerEmail(e)}
         />
-        <label htmlFor="password">password:</label>
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
           name="password"

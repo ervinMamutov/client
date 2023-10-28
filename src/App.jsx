@@ -1,4 +1,7 @@
+import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
+
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import ProductsBox from './components/ProductsBox';
@@ -10,9 +13,11 @@ const App = () => {
     <div>
       <Header title="Full Store" />
       <Navbar />
-      <Register />
-      <Login />
-      <ProductsBox />
+      <Routes>
+        <Route path="/" element={<ProductsBox />} />
+        <Route path="register" element={<Register />} />
+        <Route path="log-in" element={<Login />} />
+      </Routes>
     </div>
   );
 };
