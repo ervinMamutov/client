@@ -21,7 +21,6 @@ const ProductsBox = () => {
           );
         } else {
           setProducts(res.data.products);
-          console.log(products);
         }
       } catch (err) {
         setError(error.message);
