@@ -26,7 +26,6 @@ const Login = () => {
           const res = await axios.post('http://localhost:3000/log-in', data, {
             withCredentials: true,
           });
-          console.log(res);
         } catch (err) {
           setError(`Incorrect e-mail address or password entered`);
         }

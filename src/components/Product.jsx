@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const Product = ({ product }) => {
   return (
     <div className="product-box">
-      <h1>{product.name}</h1>
       <h2>{product.category}</h2>
-      <img className="product-img" src={product.img} alt="{product.name}" />
-      <h3>{product.price}</h3>
+      <h1>{product.name}</h1>
+      <img className="product-img" src={product.img} alt={product.name} />
+      <h3>$ {product.price}</h3>
     </div>
   );
 };

@@ -43,7 +43,6 @@ const Register = () => {
       };
       const registerData = async () => {
         const res = await axios.post('http://localhost:3000/register', data);
-        console.log(res);
       };
 
       registerData();
