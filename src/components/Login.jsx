@@ -22,12 +22,16 @@ const Login = () => {
         password: password,
       };
       const postLogin = async () => {
-        const res = await axios.post('http://localhost:3000/log-in', data);
-        console.log(res);
+        try {
+          const res = await axios.post('http://localhost:3000/log-in', data, {
+            withCredentials: true,
+          });
+          console.log(res);
+        } catch (err) {
+          setError(`Incorrect e-mail address or password entered`);
+        }
       };
       postLogin();
-    } else {
-      setError(`Incorrect e-mail address or password entered`);
     }
   };
 
